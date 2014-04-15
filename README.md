@@ -22,7 +22,8 @@ then we will have to import it. in the current directory, do:
 
    vagrant box add sles12 package.box 
 
-== how do i use it == ?
+How do i use it
+---------------
 
 if i have to maintain a project a normally do:
 
