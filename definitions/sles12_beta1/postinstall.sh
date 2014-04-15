@@ -23,7 +23,7 @@ echo -e "\nspeed-up remote logins ..."
 echo -e "\n# added by veewee/postinstall.sh" >> /etc/ssh/sshd_config
 echo -e "UseDNS no\n" >> /etc/ssh/sshd_config
 
-zypper --non-interactive addrepo http://download.suse.de/ibs/SUSE:/SLE-12:/GA/standard/
+zypper --non-interactive addrepo http://download.suse.de/ibs/SUSE:/SLE-12:/GA/standard/ sles12
 zypper --non-interactive in nfs-client rsync
 
 zypper --non-interactive refresh
