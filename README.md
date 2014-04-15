@@ -18,11 +18,13 @@ To build the vm (check if you are able to resolve suse.de addresses)
 it will download the iso and will prepare a VM.
 if everything goes well, then you will have to pack it as:
 
-    vagrant package --base sles12_beta1 # to generate the base box, package.box in the current directory.
+    bundle exec veewee vbox export sles12_beta1 #you will have a sles12_beta1.box in the current directory
+or
+    vagrant package --base sles12_beta1 --output sles12_beta1.box # to generate the base box, sles12_beta1.box in the current directory.
  
 then we will have to import it. in the current directory, do:
 
-    vagrant box add sles12 package.box 
+    vagrant box add sles12 sles12_beta1.box 
 
 How do i use it
 ---------------
