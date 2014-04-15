@@ -11,7 +11,9 @@ dependencies:
 
 To build the vm (check if you are able to resolve suse.de addresses)
 
-     veewee vbox build scc_sles12_beta1 --force
+     bundle install
+
+     bundle exec veewee vbox build scc_sles12_beta1 --force
 
 it will download the iso and will prepare a VM.
 if everything goes well, then you will have to pack it as:
@@ -20,7 +22,7 @@ if everything goes well, then you will have to pack it as:
  
 then we will have to import it. in the current directory, do:
 
-   vagrant box add sles12 package.box 
+    vagrant box add sles12 package.box 
 
 How do i use it
 ---------------
