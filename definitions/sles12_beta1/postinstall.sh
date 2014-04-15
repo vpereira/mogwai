@@ -3,7 +3,10 @@ echo 'solver.allowVendorChange = true' >> /etc/zypp/zypp.conf
 echo 'solver.onlyRequires = true' >> /etc/zypp/zypp.conf
 
 zypper --non-interactive rr SUSE-Linux-Enterprise-Server-12-12.0-
-rm /etc/zypp/locks
+
+if [ -e /etc/zypp/locks ];then
+    rm /etc/zypp/locks
+fi
 echo 'gem: --no-ri --no-rdoc' > /etc/gemrc
 echo -e "\ninstall vagrant key ..."
 mkdir -m 0700 /home/vagrant/.ssh
