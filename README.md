@@ -13,7 +13,7 @@ To build the vm (check if you are able to resolve suse.de addresses)
 
      bundle install
 
-     bundle exec veewee vbox build scc_sles12_beta1 --force
+     bundle exec veewee vbox build sles12_beta1 --force
 
 it will download the iso and will prepare a VM.
 if everything goes well, then you will have to pack it as:
