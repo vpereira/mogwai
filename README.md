@@ -5,9 +5,20 @@ The idea is to provide vagrant boxes to be used by our maintenance team.
 
 dependencies:
 
+* ruby (just tested with 2.x)
+* gem bundler (gem bundler install)
+* curl 
 * Vagrant 1.5 (tested with 1.5.2)
 * Virtualbox (tested witth 4.3.x)
 * Veewee
+
+Important:
+
+I'm using rvm (http://rvm.io) as ruby env. Didn't test with system ruby or rbenv.
+I just tested with Virtualbox. However it should work as well with kvm and libvirt (if it works, please tell me)
+
+Instructions
+------------
 
 To build the vm (check if you are able to resolve suse.de addresses)
 
