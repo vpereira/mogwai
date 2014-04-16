@@ -39,6 +39,13 @@ then we will have to import it. in the current directory, do:
 
     vagrant box add sles12 sles12_beta1.box 
 
+
+VMs available
+-------------
+
+* SLES-12-SP1 
+* SLES-13-SP3
+
 How do i use it
 ---------------
 
