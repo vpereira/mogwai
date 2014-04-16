@@ -19,7 +19,9 @@ it will download the iso and will prepare a VM.
 if everything goes well, then you will have to pack it as:
 
     bundle exec veewee vbox export sles12_beta1 #you will have a sles12_beta1.box in the current directory
+
 or
+
     vagrant package --base sles12_beta1 --output sles12_beta1.box # to generate the base box, sles12_beta1.box in the current directory.
  
 then we will have to import it. in the current directory, do:
