@@ -39,10 +39,13 @@ Veewee::Session.declare({
         $webserver = Thread.new { WEBrick::HTTPServer.new(:Port => 8888, :DocumentRoot => path, :BindAddress=>"127.0.0.1").start }
       end,
       :after_boot_sequence => Proc.new do
-         `/usr/bin/curl 'http://127.0.0.1:7122/autoinst.xml'` #we must fire it once, otherwise the process freezes
+         `/usr/bin/curl 'http://127.0.0.1:7122/autoinst.xml'` # we must fire it once, otherwise the process freezes
       end,
       :before_postinstall => Proc.new do
           $webserver.kill
+      end,
+      :after_postinstall => Proc.new do
+          `/usr/bin/VBoxManage controlvm sles12_beta1 poweroff` # hardcoded name sucks!
       end
   }
 })
