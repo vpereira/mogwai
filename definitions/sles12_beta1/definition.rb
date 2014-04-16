@@ -26,17 +26,20 @@ Veewee::Session.declare({
   :ssh_password      => 'vagrant',
   :ssh_key           => '',
   :ssh_host_port     => '7222',
-  :ssh_guest_port    => '222',
+  :ssh_guest_port    => '22',
   :sudo_cmd     => "echo '%p'|sudo -S sh '%f'",
   :shutdown_cmd => 'halt',
-  :postinstall_files   => %w{ postinstall.sh },
+  :postinstall_files   => ["postinstall.sh"],
   :postinstall_timeout => '10000',
   :hooks => {
       :before_create => Proc.new do
         puts "Assembly started at #{Time.now}"
         puts definition.box.name
         path = "#{Dir.pwd}/definitions/#{definition.box.name}"
-        webserver = Thread.new { WEBrick::HTTPServer.new(:Port => 8888, :DocumentRoot => path, :BindAddress=>"127.0.0.1").start }
+        $webserver = Thread.new { WEBrick::HTTPServer.new(:Port => 8888, :DocumentRoot => path, :BindAddress=>"127.0.0.1").start }
+      end,
+      :before_postinstall => Proc.new do
+          $webserver.kill
       end
   }
 })
