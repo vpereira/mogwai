@@ -1,7 +1,7 @@
 DEPLOY LIKE A BOSS
 ==================
 
-The idea is to provide vagrant boxes to be used by our maintenance team.
+The idea is to provide virtual machines and vagrant boxes to be used by our maintenance team.
 
 dependencies:
 
@@ -26,8 +26,10 @@ To build the vm (check if you are able to resolve suse.de addresses)
 
      bundle exec veewee vbox build sles12_beta1 --force
 
-it will download the iso and will prepare a VM.
-if everything goes well, then you will have to pack it as:
+it will download the iso and will prepare a VM. if you dont want to use Vagrant, 
+then you are done. the new VM will be available in your Virtualbox
+
+if you want to use the VM with Vagrant and everything goes well, then you will have to pack it as:
 
     bundle exec veewee vbox export sles12_beta1 #you will have a sles12_beta1.box in the current directory
 
