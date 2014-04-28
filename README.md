@@ -46,7 +46,7 @@ VMs available
 -------------
 
 * SLES-12-SP1 
-* SLES-13-SP3
+* SLES-11-SP3
 
 How do i use it
 ---------------
