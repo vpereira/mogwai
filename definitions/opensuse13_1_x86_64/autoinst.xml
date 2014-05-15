@@ -54,7 +54,7 @@
       <dns>
         <dhcp_hostname config:type="boolean">false</dhcp_hostname>
         <domain>suse.de</domain>
-        <hostname>vagrant-kvm-sle12b5</hostname>
+        <hostname>vagrant-vbox-opensuse13-1</hostname>
         <resolv_conf_policy>auto</resolv_conf_policy>
         <searchlist config:type="list">
           <search>suse.de</search>
@@ -64,7 +64,7 @@
       <interfaces config:type="list">
         <interface>
           <bootproto>dhcp</bootproto>
-          <device>enp0s3</device>
+          <device>enp0s25</device>
           <name>Ethernet Card 0</name>
           <startmode>auto</startmode>
           <usercontrol>no</usercontrol>
@@ -101,7 +101,7 @@
           <partition>
             <mount>/</mount>
             <size>max</size>
-            <filesystem config:type="symbol">btrfs</filesystem>
+            <filesystem config:type="symbol">ext3</filesystem>
             <format config:type="boolean">true</format>
           </partition>
         </partitions>
@@ -116,8 +116,8 @@
         <package>rsyslog</package>
         <package>rsync</package>
         <package>sudo</package>
-        <package>ca-certificates-mozilla</package>
-        <package>dmidecode</package>
+        <package>openssl-certs</package>
+        <package>python-dmidecode</package>
       </packages>
       <patterns config:type="list">
         <pattern>Minimal</pattern>
