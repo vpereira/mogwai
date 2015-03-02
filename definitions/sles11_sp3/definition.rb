@@ -45,7 +45,7 @@ Veewee::Session.declare({
           $webserver.kill
       end,
       :after_postinstall => Proc.new do
-          `/usr/bin/VBoxManage controlvm sles12_beta1 poweroff` # hardcoded name sucks!
+          `/usr/bin/VBoxManage controlvm sles11_sp3 poweroff` # hardcoded name sucks!
       end
   }
 })
